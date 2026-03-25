@@ -19,14 +19,27 @@ const createGallery = function (images) {
       return `
       <li class="gallery-item">
         <a href="${image.largeImageURL}">
-          <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+          <img class="gallery-image" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
         </a>
-        <div class="info">
-          <p>Likes: ${image.likes}</p>
-          <p>Views: ${image.views}</p>
-          <p>Comments: ${image.comments}</p>
-          <p>Downloads: ${image.downloads}</p>
-        </div>
+        
+<div class="info">
+  <div class="info-item">
+    <span class="label">Likes</span>
+    <span class="value">${image.likes}</span>
+  </div>
+  <div class="info-item">
+    <span class="label">Views</span>
+    <span class="value">${image.views}</span>
+  </div>
+  <div class="info-item">
+    <span class="label">Comments</span>
+    <span class="value">${image.comments}</span>
+  </div>
+  <div class="info-item">
+    <span class="label">Downloads</span>
+    <span class="value">${image.downloads}</span>
+  </div>
+</div>
       </li>
       `;
     })
