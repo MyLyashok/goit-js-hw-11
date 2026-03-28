@@ -37,7 +37,7 @@ main:has(.back-link) {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .loader {
@@ -48,6 +48,10 @@ main:has(.back-link) {
   position: relative;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+
+  display: block;
+  margin: 20px auto;
+  
 }
 
 .loader::after,
@@ -174,4 +178,10 @@ justify-content: center;
     line-height: 200%;
     letter-spacing: 0.04em;
     color: #2e2f42;
+}
+
+.load-more {
+ margin: 32px auto;
+ display: block;
+ width: 150px;
 }

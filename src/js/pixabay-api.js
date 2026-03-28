@@ -5,14 +5,16 @@ const url = 'https://pixabay.com/api/';
 
 
 
-export async function getImagesByQuery(query) {
+export async function getImagesByQuery(query, page = 1) {
         const response = await axios.get(url, {
             params: {
                 key: apiKey,
                 q: query,
                 image_type: 'photo',
                 orientation: 'horizontal',
-                safesearch: true
+                safesearch: true,
+                page: page,
+                per_page:15 
             }
         });
         return response.data;

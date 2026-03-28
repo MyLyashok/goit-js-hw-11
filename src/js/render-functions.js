@@ -53,4 +53,9 @@ const clearGallery = function () {
   gallery.innerHTML = '';
 };
 
-export { createGallery, clearGallery, showLoader, hideLoader };
+const loadMoreBtn = document.querySelector('.load-more');
+
+const showLoadMoreButton = () => loadMoreBtn.classList.remove('hidden');
+const hideLoadMoreButton = () => loadMoreBtn.classList.add('hidden');
+
+export { createGallery, clearGallery, showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton };
