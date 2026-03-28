@@ -47,6 +47,11 @@ async function submitForm(event) {
             const maxPage = Math.ceil(totalHits / 15);
             if (maxPage > 1) {
                 showLoadMoreButton();
+            } else {
+                iziToast.info({
+                    message: "We're sorry, but you've reached the end of search results.",
+                 position: "topRight"   
+                });
             }
 
             form.reset();
