@@ -84,7 +84,7 @@ async function handleLoadMore() {
         
    
         const maxPage = Math.ceil(totalHits / 15);
-        if (currentPage >= maxPage) {₴
+        if (currentPage >= maxPage) {
             iziToast.info({
                 message: "We're sorry, but you've reached the end of search results.",
                 position: "topRight"
